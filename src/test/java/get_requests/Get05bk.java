@@ -3,7 +3,6 @@ package get_requests;
 import base_urls.ReqresBaseUrlK;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -68,7 +67,7 @@ public class Get05bk extends ReqresBaseUrlK {
 
 
             response.then().assertThat().body("data.id",equalTo(3)
-            ,"data.name", equalTo("true red")
+            ,"data.name",equalTo("true red")
             ,"data.year",equalTo(2002)
             ,"data.color",equalTo("#BF1932")
             ,"data.pantone_value",equalTo("19-1664")

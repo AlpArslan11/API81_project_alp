@@ -4,13 +4,12 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 
-public class ReqresBaseUrl {
+public class AutomationExerciseUrlK {
+
     protected RequestSpecification spec;
 
     @Before
-    public void setup() {
-        spec = new RequestSpecBuilder().setBaseUri("https://reqres.in/api").build();
+    public void setUp(){
+        spec= new RequestSpecBuilder().setBaseUri("https://automationexercise.com/api").build();
     }
-
-
 }

@@ -34,12 +34,10 @@ public class Get06bk extends ReqresBaseUrlK {
 
         //   1)Status code is 200
         response.then().assertThat().statusCode(200);
-       //   response.prettyPrint();
-       // 2)Print all pantone_values
-        JsonPath jsonPath = response.jsonPath();
-        System.out.println(jsonPath.getList("data.pantone_value"));
+        //  response.prettyPrint();
 
-        //   3)Print all ids greater than 3 on the console
+        //   2)Print all ids greater than 3 on the console
+        JsonPath jsonPath = response.jsonPath();
         List<Integer> ids = jsonPath.getList("data.findAll{it.id>3}.id");
         System.out.println(ids);
 

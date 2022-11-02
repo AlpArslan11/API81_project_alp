@@ -47,7 +47,7 @@ public class Get04bk extends JsonPlaceHolderBaseUrlK {
         response.then().assertThat().body("id",hasSize(200));
 
         //           "quis eius est sint explicabo" should be one of the todos title
-        response.then().assertThat().body("title",hasItem("quis ut nam facilis et officia qui"));
+        response.then().assertThat().body("title",Matchers.hasItem("quis ut nam facilis et officia qui"));
         //           2, 7, and 9 should be among the userIds
 
         response.then().assertThat().body("userId",Matchers.hasItems(2,7,9));
