@@ -43,7 +43,7 @@ public class Get09 extends RestfulBaseUrl {
 
         Map<String,Object> expectedData = new HashMap<>();
 
-        expectedData.put("firstname","Sally");
+        expectedData.put("firstname","Jim");
         expectedData.put("lastname","Brown");
         expectedData.put("totalprice",111);
         expectedData.put("depositpaid",true);

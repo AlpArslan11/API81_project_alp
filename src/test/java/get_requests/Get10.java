@@ -48,6 +48,7 @@ public class Get10 extends GoRestBaseUrl {
 
         Map<String,Object> actualData = response.as(HashMap.class);
         System.out.println("actualData = " + actualData);
+
         assertEquals(expectedData.get("meta"),actualData.get("meta"));
         assertEquals(dataKeyMap.get("name"), ((Map)actualData.get("data")).get("name"));
         assertEquals(dataKeyMap.get("email"), ((Map)actualData.get("data")).get("email"));
